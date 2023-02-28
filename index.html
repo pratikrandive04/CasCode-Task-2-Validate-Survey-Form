@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="group">
+        <header class="header">
+          <h1 id="title" class="text-center">Product Survey Form</h1>
+          <p id="description" class="description text-center">Thank you for Using Our product</p>
+        </header>
+        <form action="/myaction.php" id="survey-form" name="survey-form" onsubmit="return validateForm()" method="post">
+          <div class="form-group" id="nameDiv">
+            <label id="name-label" for="name">Name:</label><br>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your name"/>
+            <span class="formError"></span>
+          </div>
+          <div class="form-group" id="emailDiv">
+            <label id="email-label" for="email">Email:</label><br>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"/>
+          </div>
+          <div class="form-group" id="ageDiv">
+            <label id="number-label" for="age">Age:<span class="clue">(optional)</span></label><br>
+            <input type="number" name="age" id="age"class="form-control" placeholder="Age"/>
+            <span class="formError"></span>
+          </div>
+          <div class="form-group" id="numberDiv">
+            <label id="number-label" for="number">Contact Number:</label><br>
+            <input type="tel" name="number" id="number" class="form-control" placeholder="Enter Your Number"/>
+            <span class="formError"></span>
+          </div>
+          <div class="form-group">
+            <p>Which option describes your current role?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option>Select current role</option>
+              <option value="Student">Student</option>
+              <option value="Working">Working</option>
+              <option value="Bussiness">Bussiness</option>
+              <option value="Home maker">Home maker</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>Select your gender?</p>
+            <label>
+              <input type="radio" name="gender" value="Male" class="input-radio"/>Male</label><br></br>
+              <label>
+                <input type="radio" name="gender" value="Female" class="input-radio"/>Female</label><br></br>
+              <label>
+                <input type="radio" name="gender" value="Other" class="input-radio"/>Other</label>
+          </div>
+          <div class="form-group">
+            <p> Would you recommend this product to others?</p>
+              <label>
+              <input type="radio" name="user-recommend" value="Definitely" class="input-radio"/>
+                 Definitely</label>
+              <br></br>
+              <label>
+                <input type="radio" name="user-recommend" value="Maybe" class="input-radio"/>Maybe</label>
+                <br></br>
+              <label>
+                <input type="radio" name="user-recommend" value="Not sure" class="input-radio"/>Not sure
+              </label>
+          </div>
+          <div class="form-group">
+            <p>What made you to buy this product?<span class="clue">(Check all that apply)</span></p>
+            <label>
+              <input name="prefer" value="Talcum powder" type="checkbox" class="input-checkbox"/>Talcum powder</label><br></br>
+            <label>
+              <input name="prefer" value="Perfume" type="checkbox" class="input-checkbox"/>Perfume</label><br></br>
+            <label>
+              <input name="prefer" value="Bathing soap" type="checkbox" class="input-checkbox"/>Bathing soap</label><br></br>
+            <label>
+              <input name="prefer" value="Washing soap" type="checkbox" class="input-checkbox"/>Washing soap</label><br></br>
+            <label>
+              <input name="prefer" value="sanitizer" type="checkbox" class="input-checkbox"/>Sanitizer
+              </label><br></br>
+            <label>
+              <input name="prefer" value="Shampoo" type="checkbox" class="input-checkbox"/>Shampoo</label><br></br>
+            <label>
+              <input name="prefer" value="face-wash" type="checkbox" class="input-checkbox"/>Face-wash</label><br></br>
+          </div>
+          <div class="form-group">
+              <p>Any comments or suggestions?</p>
+                  <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+          </div>
+          <input type="submit" id="submit" value="Submit" class="submit-button"/>
+      </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
