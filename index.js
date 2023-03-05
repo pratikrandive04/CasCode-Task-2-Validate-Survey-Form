@@ -35,7 +35,7 @@ function validateForm(){
         setError("numberDiv","*Number Can't Be Nagetive");
         returnValue= false;
     }
-    if(number>10 ||number <=9){
+    if(number.length!=10){
         setError("numberDiv","*Enter A Valid 10 digit Number");
         returnValue= false;
     }
